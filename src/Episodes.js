@@ -1,14 +1,34 @@
 import React from 'react';
+import { useQuery, gql } from "@apollo/client";
+
+const GET_EPISODES = gql`
+  query {
+    episodes(filter: { episode: "S04"}) {
+      results {
+        id
+        episode 
+        name
+        air_date
+      }
+    }
+  }
+`;
 
 
 function Episodes() {
-  const cars = Array.from({length: 10}, (_, i) => i + 1)
+  const { loading, error, data } = useQuery(GET_EPISODES);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
   return (
-    <>
-	    <ul>
-        {cars.map((car) => <p>Episode {car}</p>)}
-      </ul>
-    </>
+    <ul>
+      {data.episodes.results.map(({ id, episode, name, air_date }) => (
+        <p key={id}>
+          {episode} - {name} - {air_date}
+        </p>
+      ))}
+    </ul>
   );
 }
 
