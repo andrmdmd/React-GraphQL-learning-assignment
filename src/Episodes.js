@@ -20,15 +20,23 @@ function Episodes() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
-
+  let episodeNumber = 0;
   return (
-    <ul>
+    <div className="episodes">
       {data.episodes.results.map(({ id, episode, name, air_date }) => (
-        <p key={id}>
-          {episode} - {name} - {air_date}
-        </p>
+        <div className="episode" id={`ep-${++episodeNumber}`}>
+          <div className ="episodeName">{episode}</div>
+          <div className="episodeInfo">
+            <div className={`episodeTitle${episodeNumber % 2 === 0 ? 'Green' : 'Blue'}`}>
+              {name}
+              </div>
+              <div className="episodeDate">
+                {air_date}
+                </div>
+            </div>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 

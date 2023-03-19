@@ -1,85 +1,361 @@
+
 .App {
   text-align: center;
 }
 
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 .page-header {
-  background-color: greenyellow;
-  height: 50px;
+  background-color: #daed49;
+  height: 95px;
   display: flex;
   justify-content: left;
   align-items: center;
-  padding-top: 1px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  font-size: 10px;
-  font-family: "LatoBlack";
+  vertical-align: middle;
+
 }
+
+.header-text{
+  left: 65px;
+  justify-content: left;
+  position: absolute;
+  width: 239px;
+  height: 48px;
+  font-family: "LatoBold";
+  font-size: 35px;
+  line-height: 42px;
+  text-align: center;
+  color: #000000;
+  }
+
+.blue-side {
+  background-color:  #00bdd4; 
+  position: absolute;
+  width: 52%;
+  height: 95px;
+  margin: 0 0 0 0;
+  left: 48.65%;
+  clip-path: polygon(5.6% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 
 .container {
   display: flex;
   height: 100%;
-  
+  width: 100%;
+  margin-bottom: 147px;
 }
 
 .image_container{
   padding: 20px;
-  
+  justify-content: center;
 }
 
 .main-text{
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  text-align: left;
-  font-size: 30px;
 
+  width: 600px;
+  height: 230px;
+  text-align: left;
+  font-size: 60px;
+  line-height: 72px;
+  margin-top: -71px;
+  font-family: "LatoRegular";
+  margin-bottom: -21px;
+  font-weight: 550;
+}
+
+.bold{
+  font-family: "LatoBold";
+}
+
+.bold-blue{
+  font-family: "LatoBold";
+  font-size: 70px;
+  line-height: 84px;
+  color:#00bdd4;
 }
 
 .left {
-  padding-top: 3%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 0.9;
+  /*margin-top: 131px;*/
+  margin-top: 6.9%;
+  /*margin-left: 197px;*/
+  margin-left: 10.35%;
+  /*margin-right: 100px;*/
+  margin-right: 5.25%;
+  /*width: 33.1%;*/
+ 
 }
 
 .left img {
-  max-width: 90%;
-  max-height: 90%;
+  margin-left: -17px;
+  margin-top: 60px;
+  /*width: 647px;*/
+  width: 102.7%;
+  /*height: 664px;  */
+  height: auto;
 }
 
 .right {
   flex: 1;
-  flex-direction: column;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
-  padding: 20px;
+  /*margin-top: 120px;*/
+  margin-top: 6.3%;
+  /*margin-left: 110px;*/
+  margin-left: 5.78%;
+}
+
+.episode{
+  display: grid;
+  grid-template-columns: 120px 600px;
+  grid-template-rows: 106px;
+  font-family: "LatoBold";
+  font-size: 25px;
+}
+
+
+.episodeName{
+  grid-area: 1 / 1 / 2 / 1;
+  border-right: 1px solid #D1D1D1;
+  font-family: "LatoBlack";
+  line-height: 62px;
+  margin-left: -1px;
+  font-weight: light;
+}
+
+
+
+.episodeInfo{
+  grid-area: 1 / 2 / 2 / 2;
+  margin-left: 29px;
+  margin-top: 16px;
+  
+}
+
+.episodeTitleBlue{
+  color:#00BDD4;
+  height: 50%;
+}
+
+.episodeTitleGreen{
+  color: #BDD800;
+  height: 50%;
+}
+
+.episodeDate{
+  grid-area: 2 / 2 / 2 / 2;
+  font-size: 20px;
+  color: #959595;
+  position: relative;
+
 }
 
 .footer {
-  background-color: gray;
-  padding: 10px;
+  background-color: #464646;
   text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
+  font-family: "LatoBold";
+  font-size: 16px;
+  line-height: 19px;
+  height: 67.23px;
+  padding-top: 7px;
+  padding-left: 20px;
+  color: #CCCCCC;
   text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1500px) {
+  .left{
+    margin-left: 7%;
+    margin-right: 2%;
+  }
+  .main-text{
+    width: 450px;
+    font-size: 50px;
+    line-height: 60px;
+    padding-top: 5.1%;
+    padding-left: 1%;
+    
+  }
+  .bold-blue{
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .episode{
+    font-size: 18px;
+    grid-template-columns: 90px 490px;
+    grid-template-rows: 80px;
+  }
+  .episodeDate{
+    font-size: 15px;
+  }
+}
+
+
+
+@media (max-width: 1050px) {
+
+  html,body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .page-header{
+    justify-content: center;
+    text-align: center;
+    height: 71px;
+    width: 100%;
+    
+  }
+  .header-text{
+    left: auto;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 206px;
+    height: 23px;
+  }
+  .blue-side{
+    width: 0;
+    height: 0;
+  }
   .container {
     flex-direction: column;
+    margin-bottom: 48px;
   }
-  .left,
+  .left{
+    width: auto;
+    /*margin-left: 28px;*/
+    margin-left: 6%;
+    margin-right: 47px;
+    /*margin-top: 77px;*/
+    margin-top: 14.5%;
+  }
   .right {
     flex: none;
     width: 100%;
+  }
+  .left img{
+    /*width: 351px;
+    height: 360px;*/
+    width: 70%;
+    height: auto;
+    margin-top: 21px;
+    margin-left: 0px;
+  }
+  .image_container{
+    padding-top: 0px;
+  }
+
+  .main-text{
+    width: 550px;
+    font-size: 60px;
+    line-height: 72px;
+    padding-top: 1.1%;
+    padding-left: 15%;
+    margin-bottom: 20%;
+  }
+
+  .bold-blue{
+    font-size: 70px;
+    line-height: 84px;
+  }
+
+  .right {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 37px;
+    padding-left: 0px;
+    margin-left: 26px;
+    margin-right: 10px;
+    width: 90%;
+  }
+
+  .episode{
+    display:block;
+    font-family: "LatoBold";
+    font-size: 18px;
+    border-bottom: 1px solid #D1D1D1;
+    width: 97%;
+    margin: 0 0 0 0;
+    margin-right: 30px;
+  }
+
+  .episode:last-child{
+    border:none;
+  }
+
+  .episodeName{
+    border: none;
+    font-family: "LatoBold";
+    font-weight: light;
+    line-height: 40px;
+    margin-top: 7px;
+  }
+  .episodeInfo{
+    margin-left: -1px;
+    margin-top: 5px;
+    padding-bottom: 21px;
+  }
+
+  
+  .episodeDate{
+    font-size: 15px;
+    color: #959595;
+    margin-top: 14px;
+  }
+
+  .footer{
+    height: 50px;
+    padding: 1px 0 0 0;
+    margin: 0 0 0 -18px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 800px){
+  .main-text{
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .bold-blue{
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .left img{
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .left img{
+    /*width: 351px;
+    height: 360px;*/
+    width: 103%;
+    height: auto;
+    margin-top: 51px;
+    margin-left: 0px;
+  }
+  .main-text{
+    font-size: 35px;
+    line-height: 42px;
+    width: 337px;
+    height: 142px;
+    margin-bottom: 4.4%;
+    padding-left: 1%;
+  }
+
+  .bold-blue{
+    font-size: 40px;
+    line-height: 48px;
   }
 }

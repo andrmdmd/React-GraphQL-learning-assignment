@@ -14,7 +14,26 @@ code {
 
 @font-face {
   font-family: "LatoBlack";
-  src: local("LatoBlack"),
-   url('./Fonts/Lato-Black.ttf') format("truetype");
-  font-weight: bold;
+  src: url('./Fonts/Lato-Black.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
   }
+
+@font-face {
+font-family: "LatoRegular";
+src: url('./Fonts/Lato-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoLight";
+  src: url('./Fonts/Lato-Light.ttf') format("truetype");
+
+  }
+
+@font-face {
+font-family: "LatoBold";
+src: url('./Fonts/Lato-Bold.ttf') format("truetype");
+}
+  

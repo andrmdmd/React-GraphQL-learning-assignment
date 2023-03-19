@@ -14,12 +14,13 @@ function App() {
   return (
     <div className="App">
       <header className="page-header">
-        <h1>LOREM IPSUM</h1>
+        <h1 className="header-text">LOREM IPSUM</h1>
+        <div className="blue-side"></div>
       </header>
       <div className="container">
         <div className="left">
           <div className="main-text">
-          <h2>Episodes of the 4th seasion of the series Rick and Morty</h2>
+          <p>Episodes of the <span className='bold'>4th</span> season of the series <span className="bold-blue">Rick and Morty</span></p>
           </div>
           <div className="image-container">
              <img src={image} alt="Rick and Morty coming out of a portal" />
@@ -32,7 +33,7 @@ function App() {
         </ApolloProvider>
       </div>
       <footer className="footer">
-          <p>LOREM IPSUM © 2021</p>
+          <p>LOREM IPSUM ©2021</p>
       </footer>
     </div>
   );
