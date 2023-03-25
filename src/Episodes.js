@@ -18,25 +18,34 @@ const GET_EPISODES = gql`
 function Episodes() {
   const { loading, error, data } = useQuery(GET_EPISODES);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return (
+    <section id="loadingScreen">   
+        <p className="loadInfo">Loading episodes...</p>
+    </section>);
+  
+  if (error) return (
+    <section id="errorScreen">
+        <p className="loadInfo">Error loading episodes :(</p>
+    </section>);
+
   let episodeNumber = 0;
+
   return (
-    <div className="episodes">
+    <section className="episodes">
       {data.episodes.results.map(({ id, episode, name, air_date }) => (
-        <div className="episode" id={`ep-${++episodeNumber}`}>
+        <div key={id} className="episode" id={`ep-${++episodeNumber}`}>
           <div className ="episodeName">{episode}</div>
-          <div className="episodeInfo">
+          <aside className="episodeInfo">
             <div className={`episodeTitle${episodeNumber % 2 === 0 ? 'Green' : 'Blue'}`}>
               {name}
               </div>
               <div className="episodeDate">
                 {air_date}
                 </div>
-            </div>
+            </aside>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 

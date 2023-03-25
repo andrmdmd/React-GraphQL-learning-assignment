@@ -13,25 +13,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="page-header">
-        <h1 className="header-text">LOREM IPSUM</h1>
+      <header className="pageHeader">
+        <h1 className="headerText">LOREM IPSUM</h1>
         <div className="blue-side"></div>
       </header>
-      <div className="container">
-        <div className="left">
-          <div className="main-text">
-          <p>Episodes of the <span className='bold'>4th</span> season of the series <span className="bold-blue">Rick and Morty</span></p>
+      <main className="container">
+        <div className="leftSide">
+          <div className="titleText">
+          <p>Episodes of the <span className='bold'>4th</span> season of the series <span className="boldBlueText">Rick and Morty</span></p>
           </div>
-          <div className="image-container">
-             <img src={image} alt="Rick and Morty coming out of a portal" />
-          </div>
+          <img src={image} alt="Rick and Morty coming out of a portal" />
         </div>
         <ApolloProvider client={client}>
-          <div className="right">
+          <div className="rightSide">
               <Episodes /> 
           </div>
         </ApolloProvider>
-      </div>
+      </main>
       <footer className="footer">
           <p>LOREM IPSUM ©2021</p>
       </footer>

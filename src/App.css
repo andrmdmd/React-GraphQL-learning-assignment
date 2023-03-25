@@ -3,6 +3,7 @@
   text-align: center;
 }
 
+
 body{
     width: 100%;
     height: 100%;
@@ -11,18 +12,19 @@ body{
     overflow-x: hidden; 
 }
 
-.page-header {
+.pageHeader {
   background-color: #daed49;
   height: 95px;
   display: flex;
   justify-content: left;
   align-items: center;
   vertical-align: middle;
-
+  width: 100%;
+  
 }
 
-.header-text{
-  left: 65px;
+.headerText{
+  left: 64.5px;
   justify-content: left;
   position: absolute;
   width: 239px;
@@ -37,10 +39,11 @@ body{
 .blue-side {
   background-color:  #00bdd4; 
   position: absolute;
-  width: 52%;
+  width: 51.33%;
   height: 95px;
   margin: 0 0 0 0;
-  left: 48.65%;
+  left: auto;
+  right: 0;
   clip-path: polygon(5.6% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -49,24 +52,18 @@ body{
   display: flex;
   height: 100%;
   width: 100%;
-  margin-bottom: 147px;
+  padding-bottom: 51.5px;
 }
 
-.image_container{
-  padding: 20px;
-  justify-content: center;
-}
 
-.main-text{
-
+.titleText{
   width: 600px;
   height: 230px;
   text-align: left;
   font-size: 60px;
   line-height: 72px;
-  margin-top: -71px;
   font-family: "LatoRegular";
-  margin-bottom: -21px;
+  margin-left: 15.45%;
   font-weight: 550;
 }
 
@@ -74,43 +71,52 @@ body{
   font-family: "LatoBold";
 }
 
-.bold-blue{
+.boldBlueText{
   font-family: "LatoBold";
   font-size: 70px;
   line-height: 84px;
   color:#00bdd4;
 }
 
-.left {
+.leftSide{
   /*margin-top: 131px;*/
-  margin-top: 6.9%;
+  padding-top: 3.17%;
+  width: 45%;
   /*margin-left: 197px;*/
-  margin-left: 10.35%;
+  padding-left: 3.4%;
   /*margin-right: 100px;*/
-  margin-right: 5.25%;
+  padding-right: 3.4%;
   /*width: 33.1%;*/
- 
+  padding-bottom: 5%;
 }
 
-.left img {
-  margin-left: -17px;
-  margin-top: 60px;
+.leftSide img{
   /*width: 647px;*/
-  width: 102.7%;
+  margin-top: 4.5%;
+  margin-left: 2.5%;
   /*height: 664px;  */
   height: auto;
 }
 
-.right {
+ul{
+  all: unset;
+}
+
+
+.rightSide{
   flex: 1;
   justify-content: center;
   align-items: center;
   text-align: left;
+  width: 55%;
   /*margin-top: 120px;*/
-  margin-top: 6.3%;
+  padding-top: 6.3%;
   /*margin-left: 110px;*/
-  margin-left: 5.78%;
+  padding-left: 2.7%;
+  padding-right: 5%;
+  padding-bottom: 5%;
 }
+
 
 .episode{
   display: grid;
@@ -157,62 +163,99 @@ body{
 
 }
 
-.footer {
+.footer{
   background-color: #464646;
   text-align: center;
   font-family: "LatoBold";
   font-size: 16px;
   line-height: 19px;
-  height: 67.23px;
+  height: 60.23px;
   padding-top: 7px;
   padding-left: 20px;
   color: #CCCCCC;
+  bottom: 0;
+
+}
+
+.loadInfo{
+  font-size: 18px;
   text-align: center;
+  font-family: "LatoBold";
+  color: #00BDD4;
 }
 
-@media (max-width: 1500px) {
-  .left{
-    margin-left: 7%;
-    margin-right: 2%;
+#loadingScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#errorScreen{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width: 1400px){
+  .leftSide{
+    width: 40%;
   }
-  .main-text{
-    width: 450px;
-    font-size: 50px;
-    line-height: 60px;
-    padding-top: 5.1%;
-    padding-left: 1%;
+  .titleText{
+    font-size: 35px;
+    line-height: 42px;
+    width: 337px;
+    height: auto;
+    margin: 0 0 0 0.7%;
+    padding: 0 0 0 0;
+
+  }
+  .rightSide{
     
+    padding-top: 5.05%;
   }
-  .bold-blue{
-    font-size: 60px;
-    line-height: 60px;
+
+  .boldBlueText{
+    font-size: 40px;
+    line-height: 48px;
   }
-  .episode{
-    font-size: 18px;
-    grid-template-columns: 90px 490px;
-    grid-template-rows: 80px;
+  .leftSide img{
+    width: 90%;
   }
-  .episodeDate{
-    font-size: 15px;
-  }
+
+.episode{
+  font-size: 18px;
+  grid-template-columns: 90px 400px;
+  grid-template-rows: 80px;
+}
+.episodeDate{
+  font-size: 15px;
+
+}
 }
 
-
-
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
 
   html,body{
     width: 100%;
     overflow-x: hidden;
   }
-  .page-header{
+  .pageHeader{
     justify-content: center;
     text-align: center;
     height: 71px;
     width: 100%;
     
   }
-  .header-text{
+  .headerText{
     left: auto;
     font-size: 30px;
     line-height: 30px;
@@ -227,55 +270,49 @@ body{
   }
   .container {
     flex-direction: column;
-    margin-bottom: 48px;
+    padding-bottom: 6.5%;
   }
-  .left{
+  .leftSide{
+    padding: 1.5% 8.4% 6.7% 6.1%;
+    margin: 0 0 0 0;
     width: auto;
-    /*margin-left: 28px;*/
-    margin-left: 6%;
-    margin-right: 47px;
-    /*margin-top: 77px;*/
-    margin-top: 14.5%;
+  
   }
-  .right {
+  .leftSide img{
+    /*width: 351px;
+    height: 360px;*/
+    width: 80%;
+    height: auto;
+    margin-top: 8.7%;
+    margin-left: 0;
+
+  }
+  .rightSide {
     flex: none;
     width: 100%;
   }
-  .left img{
-    /*width: 351px;
-    height: 360px;*/
-    width: 70%;
-    height: auto;
-    margin-top: 21px;
-    margin-left: 0px;
-  }
-  .image_container{
-    padding-top: 0px;
-  }
 
-  .main-text{
+  .titleText{
     width: 550px;
     font-size: 60px;
     line-height: 72px;
-    padding-top: 1.1%;
-    padding-left: 15%;
-    margin-bottom: 20%;
+    margin: 0 0 0 15%;
+    padding: 0 0 0 0;
   }
 
-  .bold-blue{
+  .boldBlueText{
     font-size: 70px;
     line-height: 84px;
   }
 
-  .right {
+  .rightSide {
     flex: 1;
     justify-content: center;
     align-items: center;
     text-align: left;
     margin-top: 37px;
-    padding-left: 0px;
-    margin-left: 26px;
-    margin-right: 10px;
+    padding-left: 26px;
+    padding-right: 10px;
     width: 90%;
   }
 
@@ -315,6 +352,7 @@ body{
 
   .footer{
     height: 50px;
+    overflow-x: hidden; 
     padding: 1px 0 0 0;
     margin: 0 0 0 -18px;
     font-size: 14px;
@@ -323,39 +361,58 @@ body{
 }
 
 @media (max-width: 800px){
-  .main-text{
+  .titleText{
     font-size: 50px;
     line-height: 60px;
   }
-  .bold-blue{
+  .boldBlueText{
     font-size: 60px;
     line-height: 60px;
   }
-  .left img{
+  .leftSide img{
     margin-top: 10px;
   }
 }
 
-@media (max-width: 600px) {
-  .left img{
+@media (max-width: 620px) {
+  .leftSide{
+    padding: 1.5% 8.5% 6.7% 6.1%;
+    margin: 0 0 0 0;
+  }
+  .leftSide img{
     /*width: 351px;
     height: 360px;*/
-    width: 103%;
+    width: 80%;
     height: auto;
-    margin-top: 51px;
-    margin-left: 0px;
+    margin-top: 8.7%;
+    margin-left: 0;
+
   }
-  .main-text{
+  .titleText{
     font-size: 35px;
     line-height: 42px;
     width: 337px;
     height: 142px;
-    margin-bottom: 4.4%;
-    padding-left: 1%;
+    margin: 0 0 0 0.7%;
+    padding: 0 0 0 0;
+
+  }
+  .rightSide{
+    margin-top: 0;
+    padding-top: 2.05%;
   }
 
-  .bold-blue{
+  .boldBlueText{
     font-size: 40px;
     line-height: 48px;
   }
+
+  @media (max-width: 500px) {
+    .leftSide img{
+      /*width: 351px;
+      height: 360px;*/
+      width: 100%;
+    }
+  }
+
 }
