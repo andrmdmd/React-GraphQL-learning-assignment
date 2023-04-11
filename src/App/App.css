@@ -113,14 +113,15 @@ ul{
   padding-top: 6.3%;
   /*margin-left: 110px;*/
   padding-left: 2.7%;
-  padding-right: 5%;
+  /*padding-right: 5%;*/
+  padding-right: 0%;
   padding-bottom: 5%;
 }
 
 
 .episode{
   display: grid;
-  grid-template-columns: 120px 600px;
+  grid-template-columns: 120px 505px;
   grid-template-rows: 106px;
   font-family: "LatoBold";
   font-size: 25px;
