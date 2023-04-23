@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from "@apollo/client";
 
-const GET_EPISODES = gql`
+export const GET_EPISODES = gql`
   query {
     episodes(filter: { episode: "S04"}) {
       results {
@@ -25,7 +25,7 @@ function Episodes(): JSX.Element {
   
   if (error) return (
     <section id="errorScreen">
-        <p className="loadInfo" role="errorInfo">Error loading episodes :(</p>
+        <p className="loadInfo">Error loading episodes :(</p>
     </section>);
 
   return (
