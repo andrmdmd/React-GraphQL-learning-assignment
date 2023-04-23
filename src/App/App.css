@@ -27,7 +27,6 @@ body{
   left: 64.5px;
   justify-content: left;
   position: absolute;
-  width: 239px;
   height: 48px;
   font-family: "LatoBold";
   font-size: 35px;
@@ -262,7 +261,6 @@ ul{
     line-height: 30px;
     margin-top: 15px;
     margin-left: 0px;
-    width: 206px;
     height: 23px;
   }
   .blue-side{
