@@ -231,15 +231,15 @@ ul{
     width: 90%;
   }
 
-.episode{
-  font-size: 18px;
-  grid-template-columns: 90px 400px;
-  grid-template-rows: 80px;
-}
-.episodeDate{
-  font-size: 15px;
+  .episode{
+    font-size: 18px;
+    grid-template-columns: 90px 400px;
+    grid-template-rows: 80px;
+  }
+  .episodeDate{
+    font-size: 15px;
 
-}
+  }
 }
 
 @media (max-width: 1000px) {
